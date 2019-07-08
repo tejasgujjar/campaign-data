@@ -82,3 +82,21 @@
 .suggestions-list li{
   color: white;
 }
+.inner-sugggestion-box{
+  max-height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.campaign-container{
+  top: -20%;
+  position: relative;
+}
+.btn-li{
+  width: 100%;
+}
+.campaign-inp{
+  color: white !important;
+}
+.campaign-span{
+  font-size: x-large;
+}

@@ -15,7 +15,7 @@
   >
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" href="http://localhost:8000">JetFrog</a>
+        <a class="navbar-brand" href="http://localhost:8000">Campaing-Data</a>
         <!--
           <button
             class="navbar-toggler"
@@ -35,11 +35,13 @@
     </div>
   </nav>
   <div
-    class="page-header home-page-header header-filter "
-    data-parallax="true"
+    class="page-header"
   >
   <!-- ImageSource: https://unsplash.com/photos/gwI6TcYPEUA by Robert V. Ruggiero-->
-    <div class="container">
+    <div class="container campaign-container">
+        <div>
+            <span class="badge badge-pill badge-primary">Doors Knocked</span> 
+          </div>
       <div class="row">
         <div class="col-md-4 ml-auto mr-auto text-center">
           <div class="input-group">
@@ -48,63 +50,28 @@
                 <i class="fa fa-search"></i>
               </span>
             </div>
-            <input type="text" class="form-control" placeholder="Search your new home">
+            <input id="search_member" type="text" class="form-control campaign-inp" placeholder="Enter Your Name">
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="inner-sugggestion-box">
-            <ul class="suggestions-list">
-              <li>name 1</li>
-              <li>name 2</li>
-              <li>name 3</li>
+          <div class="inner-sugggestion-box">
+            <ul class="suggestions-list" id="suggestion_box">
+              <!-- <li><button class="btn btn-default btn-sm btn-li">Test</button></li> -->
             </ul>
         </div>
+        </div>
+      </div>
+      <div class="row" id="result-div">
+          <div>
+            <span id="selected_member_name" class="badge badge-pill badge-primary">Megha </span>
+          </div>        
+          <span id="selected_member_doorsknocked" class="badge badge-pill badge-danger campaign-span">266</span>        
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
       </div>
     </div>
   </div>
 
   <div class="main main-raised">
 
-    <div class="container">
-        <div class="row">
-          <div class="chains-title">
-            <h4>Showing list of transactions for selected zipcode 12345</h4>
-          </div>
-          <div class="chains-div border-red">
-            <div class="chains-inner-div border-cyan">
-              <div class="single-chain-div border-green card" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="chain-components border-yellow">
-                  <div class="single-chain-component border-black owner-component buyer">
-                       <span>Brian D Wilson</span>
-                  </div>
-                  <div class="single-chain-component border-black home-icon-component">
-                      <img src="/static/images/home-icon-default-equal-line.png" alt="home-icon-default" width="100%">
-                  </div>
-                  <div class="single-chain-component border-black owner-component seller">
-                      <span>Maria Garcia</span>
-                  </div>
-                  <div class="single-chain-component border-black home-icon-component">
-                      <img src="/static/images/home-icon-default-equal-line.png" alt="home-icon-default" width="100%">
-                  </div>
-                  <div class="single-chain-component border-black owner-component buyer">
-                      <span>Brian D Wilson</span>
-                  </div>
-                  <div class="single-chain-component border-black home-icon-component">
-                      <img src="/static/images/home-icon-default-equal-line.png" alt="home-icon-default" width="100%">
-                  </div>
-                  <div class="single-chain-component border-black owner-component seller">
-                      <span>Elizabeth Wilsan</span>
-                  </div>
-                </div>
-              </div>
-              
-              
-              
-            </div>
-          </div>
-        </div>
-    </div>
+    
   </div>
   <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modalss</button> -->
 

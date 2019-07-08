@@ -9,7 +9,6 @@ import json
 
 
 DoorsKnocked_XLS_PATH = 'files/TotalDoors.xlsx'
-MEMBERS = []
 
 class Members():
 
@@ -38,7 +37,7 @@ def home(request):
 def read_xls():
     wb = open_workbook(DoorsKnocked_XLS_PATH)
     sheet = wb.sheet_by_index(0)
-
+    MEMBERS = []
     number_of_rows = sheet.nrows
     number_of_columns = sheet.ncols
     for row in range(1, number_of_rows):
@@ -53,7 +52,7 @@ def read_xls():
                 if value == '' or value == ' ':
                     value = '-'
                 values.append(value)
-                print("VALUES: {}".format(values))
+                # print("VALUES: {}".format(values))
 
         """
         In values list:
@@ -67,13 +66,12 @@ def read_xls():
         member = Members(name, int(doors_knocked))
         MEMBERS.append(member)
 
-    print("Members: {}".format(MEMBERS[3].doors_knocked))
     return MEMBERS
 
 def dump_members(members):
     ret = []
     for mem in members:
-        print("mem: {}".format(mem.__dict__))
+        # print("mem: {}".format(mem.__dict__))
         ret.append(mem.__dict__)
     return ret
 
@@ -81,6 +79,7 @@ class MembersAPI(APIView):
     def get(self, request):
         print("GET: {}".format(request))
         members = read_xls()
+        print("members len: {}".format(len(members)))
         return Response(data=json.dumps(dump_members(members)), status=status.HTTP_200_OK)
 
     def post(self, request):
