@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<!-- The assumption of this page is that user is logged in already. -->
+<link rel="stylesheet" href="/static/css/app.css">
+
+<body class="home-page-body sidebar-collapse">
+  <nav
+    class="navbar navbar-transparent fixed-top navbar-expand-lg"
+    color-on-scroll="100"
+    id="sectionsNav"
+    style="position: absolute;"
+  >
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="http://localhost:8000">JetFrog</a>
+        <!--
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="sr-only">Toggle</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        -->
+      </div>
+      <div class="collapse navbar-collapse"></div>
+    </div>
+  </nav>
+  <div
+    class="page-header home-page-header header-filter "
+    data-parallax="true"
+  >
+  <!-- ImageSource: https://unsplash.com/photos/gwI6TcYPEUA by Robert V. Ruggiero-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 ml-auto mr-auto text-center">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-search"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Search your new home">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="inner-sugggestion-box">
+            <ul class="suggestions-list">
+              <li>name 1</li>
+              <li>name 2</li>
+              <li>name 3</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main main-raised">
+
+    <div class="container">
+        <div class="row">
+          <div class="chains-title">
+            <h4>Showing list of transactions for selected zipcode 12345</h4>
+          </div>
+          <div class="chains-div border-red">
+            <div class="chains-inner-div border-cyan">
+              <div class="single-chain-div border-green card" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="chain-components border-yellow">
+                  <div class="single-chain-component border-black owner-component buyer">
+                       <span>Brian D Wilson</span>
+                  </div>
+                  <div class="single-chain-component border-black home-icon-component">
+                      <img src="/static/images/home-icon-default-equal-line.png" alt="home-icon-default" width="100%">
+                  </div>
+                  <div class="single-chain-component border-black owner-component seller">
+                      <span>Maria Garcia</span>
+                  </div>
+                  <div class="single-chain-component border-black home-icon-component">
+                      <img src="/static/images/home-icon-default-equal-line.png" alt="home-icon-default" width="100%">
+                  </div>
+                  <div class="single-chain-component border-black owner-component buyer">
+                      <span>Brian D Wilson</span>
+                  </div>
+                  <div class="single-chain-component border-black home-icon-component">
+                      <img src="/static/images/home-icon-default-equal-line.png" alt="home-icon-default" width="100%">
+                  </div>
+                  <div class="single-chain-component border-black owner-component seller">
+                      <span>Elizabeth Wilsan</span>
+                  </div>
+                </div>
+              </div>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modalss</button> -->
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title card-title">Transaction details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+
+          </div>
+        </div> -->
+        <div class="modal-header">
+          <!-- <h5 class="modal-title card-title">Transaction details</h5> -->
+
+        </div>
+        <div class="card">
+          <div class="card-header card-header-text card-header-primary">
+            <div class="card-text">
+              <h4 class="card-title">Transaction chain details</h4>
+            </div>
+          </div>
+          <div class="card-body">
+            <h4>Property Info</h4>
+            <p>... </p>
+
+            <h4>Buyer Info</h4>
+            <p>... </p>
+
+            <h4>Seller Info</h4>
+            <p>... </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  {% include "common_js.html" %}
+  <script src="/static/js/language_selection.js" type="text/javascript"></script>
+  <script src="/static/js/functions/home.js" type="text/javascript"></script>
+</body>
+{% endblock content %}

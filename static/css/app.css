@@ -1,0 +1,84 @@
+/* Temp css */
+
+.border-red{
+  /* border: 1px solid red !important; */
+}
+.border-green{
+  border: 1px solid green !important;
+}
+.border-yellow{
+  /* border: 1px solid yellow !important; */
+}
+.border-black{
+  /* border: 1px solid black !important; */
+}
+.border-cyan{
+  /* border: 1px solid cyan !important; */
+}
+/* Actual CSS */
+.home-page-body{
+  /* background-color: #ff5722 !important; */
+  background-color: #214f84 !important;
+
+}
+
+.home-page-header{
+  height: 30vh;
+}
+
+.chains-div{
+  width: 100%;
+  /* height: 1250px; */
+}
+
+.single-chain-div{
+  width: 100%;
+  height: 80px;
+}
+
+.chain-components{
+  width: 100%;
+  height: 70px;
+  display: flex;
+}
+
+.single-chain-component{
+  width: 20%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+
+.chains-inner-div {
+
+}
+
+.home-icon-component{
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.owner-component{
+  font-weight: bold;
+}
+.owner-component span:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.buyer{
+  color: #008000c9;
+}
+.seller{
+  color: #0062ffa6;
+}
+.modal-close-icon{
+  float: right;
+}
+
+.suggestions-list{
+  list-style: none;
+}
+.suggestions-list li{
+  color: white;
+}
